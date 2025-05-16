@@ -1,10 +1,14 @@
 # React Hook Form Survey
 
-This project is a simple form survey built with React and Vite, utilizing React's to manage form data and dynamically render a table of responses.
+This project is a simple form survey built with react hook form and router dom in react js, utilizing React's to manage form data and dynamically render a table of responses.
 
 ## Preview
 
+##### Form Page
 ![Preview](./src/assets/image.png)
+
+##### Result Survey Table Page
+![Preview](./src/assets/image%20copy.png)
 
 ## How To Run This Project
 
@@ -29,8 +33,7 @@ To run the web you can use the command :
 
 ## How To Contribute
 
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 

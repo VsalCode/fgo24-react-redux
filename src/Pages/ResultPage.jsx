@@ -22,25 +22,25 @@ const FormPage = () => {
   return (
     <div className="bg-primary h-fit flex flex-col items-center py-15">
       <form className="flex flex-col gap-3 w-full max-w-[700px] px-10 ">
-        <section className="flex flex-col gap-7 bg-white shadow rounded p-10 border-t-15 border-t-secondary">
+        <section className="section border-t-15 border-t-secondary">
           <h1 className="font-bold text-3xl">Hasil Survey Perokok</h1>
           <p className="text-lg">Halo! Terima kasih telah mengisi form ini!😊</p>
-          <table border="2">
-            <thead>
-              <th>Nama</th>
-              <th>Umur</th>
-              <th>Gender</th>
-              <th>Perokok</th>
-              <th>Jenis Rokok</th>
+          <table className="border mt-5">
+            <thead className="border">
+              <th className="border text-center py-3">Nama</th>
+              <th className="border text-center py-3">Umur</th>
+              <th className="border text-center py-3">Gender</th>
+              <th className="border text-center py-3">Perokok</th>
+              <th className="border text-center py-3">Jenis Rokok</th>
             </thead>
-            <tbody>
+            <tbody className="border">
               {data.map((item) => (
-                <tr key={item}>
-                  <td>{item.name}</td>
-                  <td>{item.age}</td>
-                  <td>{item.gender}</td>
-                  <td>{item.smoker}</td>
-                  <td>{item.cigarette.join(',')}</td>
+                <tr key={item} className="border">
+                  <td className="border text-center py-3">{item.name}</td>
+                  <td className="border text-center py-3">{item.age}</td>
+                  <td className="border text-center py-3">{item.gender}</td>
+                  <td className="border text-center py-3">{item.smoker}</td>
+                  <td className="border text-center py-3">{item.cigarette.join(',')}</td>
                 </tr>
               ))}
             </tbody>
