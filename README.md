@@ -1,12 +1,39 @@
-# React + Vite
+# React Hook Form Survey
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple form survey built with React and Vite, utilizing React's to manage form data and dynamically render a table of responses.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Preview](./src/assets/image.png)
 
-## Expanding the ESLint configuration
+## How To Run This Project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clone this project url :
+
+``` https://github.com/VsalCode/fgo24-react-form.git ```
+
+after entering the folder, install the dependencies:
+
+```npm install```
+
+To run the web you can use the command :
+
+```npm run dev```
+
+##  dependencies used
+- Vite
+- Tailwind CSS
+- React Hook Form
+- React Router DOM
+
+
+## How To Contribute
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[ISC](https://opensource.org/license/isc-license-txt)
