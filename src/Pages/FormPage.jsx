@@ -4,6 +4,8 @@ import Options from "../Components/Options";
 import { useNavigate } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useDispatch } from 'react-redux'
+import { addSurveyResult } from '../redux/reducers/surveyResult'
 
 const validation = yup.object({
   name: yup.string().min(3, "nama minimal 3 karakter!").required("Nama Harus Diisi !"),
@@ -14,11 +16,12 @@ const validation = yup.object({
 })
 
 const FormPage = () => {
+  const dispatch = useDispatch()
   const { register, handleSubmit, formState: {errors} } = useForm({
     resolver: yupResolver(validation)
   })
   const nav = useNavigate()  
-  const dataForm = []
+  // const dataForm = []
 
   const onSubmit = (data) => {
     // console.log(data)
@@ -30,8 +33,10 @@ const FormPage = () => {
     }
 
     data.age = sanitization
-    dataForm.push(data)
-    window.localStorage.setItem('data', JSON.stringify(dataForm))
+    // dataForm.push(data)
+    // window.localStorage.setItem('data', JSON.stringify(dataForm))
+
+    dispatch(addSurveyResult(data))
     nav('/result')
   }
   

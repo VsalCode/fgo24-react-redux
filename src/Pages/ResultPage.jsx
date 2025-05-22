@@ -1,19 +1,22 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import Input from "../Components/Input";
 import Options from "../Components/Options";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const FormPage = () => {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
   const nav = useNavigate();
+  const formResult = useSelector(state => state.surveyResult.data) 
 
-  useEffect(() => {
-    const getData = JSON.parse(window.localStorage.getItem("data"));
 
-    if (getData) {
-      setData(getData);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const getData = JSON.parse(window.localStorage.getItem("data"));
+
+  //   if (getData) {
+  //     setData(getData);
+  //   }
+  // }, []);
 
   function handleBack() {
     nav("/");
@@ -34,13 +37,13 @@ const FormPage = () => {
               <th className="border text-center py-3">Jenis Rokok</th>
             </thead>
             <tbody className="border">
-              {data.map((item) => (
+              {formResult.map((item) => (
                 <tr key={item} className="border">
                   <td className="border text-center py-3">{item.name}</td>
                   <td className="border text-center py-3">{item.age}</td>
                   <td className="border text-center py-3">{item.gender}</td>
                   <td className="border text-center py-3">{item.smoker}</td>
-                  <td className="border text-center py-3">{item.cigarette.join(',')}</td>
+                  <td className="border text-center py-3">{item.cigarette?.join(',')}</td>
                 </tr>
               ))}
             </tbody>
