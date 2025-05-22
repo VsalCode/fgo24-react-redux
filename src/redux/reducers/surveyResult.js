@@ -15,9 +15,13 @@ const surveyResult = createSlice({
           ...action.payload
         })
         return
+      },
+      removeData: (state, action) => {
+        state.data = state.data.filter((_, index) => index !== action.payload);
+        return
       }
     }
 })
 
-export const { addData } = surveyResult.actions
+export const { addData, removeData } = surveyResult.actions
 export default surveyResult.reducer
