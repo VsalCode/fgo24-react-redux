@@ -1,14 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-  data: [{}]
+  data: []
 }
 
 const surveyResult = createSlice({
     name: 'surveyResult',
     initialState,
     reducers: {
-      addSurveyResult: (state, action) => {
+      addData: (state, action) => {
         const id = state.data.length + 1
         state.data.push({
           id,
@@ -19,5 +19,5 @@ const surveyResult = createSlice({
     }
 })
 
-export const { addSurveyResult } = surveyResult.actions
+export const { addData } = surveyResult.actions
 export default surveyResult.reducer

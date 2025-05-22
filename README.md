@@ -1,6 +1,6 @@
-# React Hook Form Survey
+# React Redux Form Survey
 
-This project is a simple form survey built with react hook form and router dom in react js, utilizing React's to manage form data and dynamically render a table of responses.
+This project is a simple form survey built with react hook form and use React Redux to manage form data and dynamically render a table of responses.
 
 ## Preview
 
@@ -14,7 +14,7 @@ This project is a simple form survey built with react hook form and router dom i
 
 Clone this project url :
 
-``` https://github.com/VsalCode/fgo24-react-form.git ```
+``` https://github.com/VsalCode/fgo24-react-redux.git ```
 
 after entering the folder, install the dependencies:
 
@@ -29,7 +29,7 @@ To run the web you can use the command :
 - Tailwind CSS
 - React Hook Form
 - React Router DOM
-
+- Redux
 
 ## How To Contribute
 
