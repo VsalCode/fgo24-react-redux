@@ -2,7 +2,7 @@ import { combineReducers } from "@reduxjs/toolkit";
 import surveyResult from './surveyResult'
 
 const reducer = combineReducers({
-  surveyResult
+  surveyResult,
 })
 
 export default reducer
